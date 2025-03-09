@@ -2,7 +2,7 @@ const mongoose=require("mongoose");
 
 const conn=async()=>{
     try{
-     await mongoose.connect("mongodb+srv://gudipudiakshaya22:akshaya22,8,2005@cluster0.gfhvm.mongodb.net/task1");
+     await mongoose.connect(process.env.MONGO_URI);
      console.log("connected to data base hello");
 
     }

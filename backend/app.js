@@ -9,6 +9,6 @@ app.use(cors());
 require("./conn/conn.js");
 const userRouter=require('./routes/user.js');
 app.use('/api',userRouter);
-app.listen(3000,()=>{
-    console.log("listening to port number 3000")
+app.listen(process.env.PORT,()=>{
+    console.log(`listening to port number ${process.env.PORT}`)
 });
